@@ -10,7 +10,7 @@ import { MailOutlined, QuestionOutlined } from '@ant-design/icons';
 
 import {motion} from 'framer-motion'
 
-const {Title, Paragraph} = Typography
+const {Title, Text} = Typography
 
 const Contact = () => {
 
@@ -54,9 +54,9 @@ const Contact = () => {
 
         <div style={{width: "100%", height: "calc(100vh - 80px)", display: 'flex', justifyContent: 'center', alignItems: "center", }}>
             <div style={{position: 'relative'}}>
-                <Card style={{width: mobile ? "400px" : "550px",height: "500px",  padding: mobile ? "12px 20px": "24px 50px", boxShadow: "2px 4px 10px rgba(0,0,0,0.1)", marginTop: "20px", position: 'relative', zIndex: '1', display: 'flex', alignItems: 'center'}}>
+                <Card style={{width: mobile ? "400px" : "550px",height: "530px",  padding: mobile ? "12px 20px": "24px 50px", boxShadow: "2px 4px 10px rgba(0,0,0,0.1)", marginTop: "20px", position: 'relative', zIndex: '1', display: 'flex', alignItems: 'center'}}>
                     <div>
-                        <Title level={2} style={{color: "#13384e", marginBottom: '20px'}}> Contact Us. </Title>
+                        <Title level={2} style={{color: "#13384e", marginBottom: '20px'}}> Get Involved </Title>
                         <Input id="email" onChange={handleForm} value={form.email} style={{height: "38px", borderRadius: "5px", marginBottom: "25px"}} placeholder="Email" prefix={<MailOutlined style={{color: "#ffc041", marginRight: "5px"}}/>}></Input>
                         <Input id="subject" onChange={handleForm} value={form.subject} style={{height: "38px", borderRadius: "5px", marginBottom: "25px"}} placeholder="Subject" prefix={<QuestionOutlined style={{color: "#ffc041", marginRight: "5px"}}/>}></Input>
 
@@ -65,6 +65,10 @@ const Contact = () => {
                         <motion.div onClick={sendMessage} whileHover={{scale: 1.03, transition: {type: 'linear'}}} style={{ background: "#ffc041", padding: "8px 20px", width: "100%", textAlign: "center", color: "white", cursor: "pointer",borderRadius: "5px"}}>
                         Send Message
                         </motion.div>
+                    </div>
+
+                    <div style={{width: '100%', textAlign: 'center', marginTop: '30px'}}>
+                        <Text>501(c)3 Non Profit - EID :  </Text>
                     </div>
 
 

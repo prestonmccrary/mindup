@@ -26,6 +26,7 @@ const Research = () => {
             <Title level={2} style={{color: "#13384e", margin: '20px 0px'}}> Our Research </Title>
 
             <ShowcaseDropdown 
+                initial={true}
                 type="paper" 
                 link="https://link.springer.com/chapter/10.1007%2F978-3-030-59277-6_21"
                 title="Deep LSTM Recurrent Neural Network for Anxiety Classification from EEG in Adolescents with Autism"
@@ -33,6 +34,7 @@ const Research = () => {
             />
 
             <ShowcaseDropdown 
+                initial={false}
                 type="patent" 
                 link="https://link.springer.com/chapter/10.1007%2F978-3-030-59277-6_21"
                 title="Nueroadaptive Breathing Entrainment System for Individualized Modulated Respiration"

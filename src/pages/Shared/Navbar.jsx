@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 import { Row, Col, Typography, Button, Dropdown, Divider,Menu, Drawer} from 'antd';
 
-import { SearchOutlined, TwitterOutlined, TeamOutlined, MenuOutlined, YoutubeFilled, HomeOutlined} from '@ant-design/icons';
+import { SearchOutlined, QuestionOutlined, TeamOutlined, MenuOutlined, YoutubeFilled, HomeOutlined} from '@ant-design/icons';
 
 import logo from '../../assets/product/mindup-logo.png'
 
@@ -54,7 +54,9 @@ const Navbar = () => {
         >
           <p style={{fontSize: "14px"}}><Link to='/' onClick={() => setDrawerVisibility(false)}> <HomeOutlined style={{marginRight: '5px'}}/> Home</Link></p>
           <p style={{fontSize: "14px"}}><Link to='/research' onClick={() => setDrawerVisibility(false)}> <SearchOutlined style={{marginRight: '5px'}}/> Research</Link></p>
-          <p style={{fontSize: "14px"}}><Link to='/contact' onClick={() => setDrawerVisibility(false)}> <TeamOutlined style={{marginRight: '5px'}}/> Contact</Link></p>
+          <p style={{fontSize: "14px"}}><Link to='/about' onClick={() => setDrawerVisibility(false)}> <QuestionOutlined style={{marginRight: '5px'}}/> About</Link></p>
+
+          <p style={{fontSize: "14px"}}><Link to='/contact' onClick={() => setDrawerVisibility(false)}> <TeamOutlined style={{marginRight: '5px'}}/> Get Involved</Link></p>
 
           {/* <p style={{fontSize: "14px"}}><Link> <LoginOutlined style={{marginRight: '5px'}}/> Login</Link></p> */}
           {/* <Divider></Divider>
@@ -71,11 +73,14 @@ const Navbar = () => {
           <Link to="/"><img src={logo} style={{marginLeft:"10px", height:"calc(50px * 0.55)"}}></img></Link>
           {/* <Text style={{marginLeft: "20px", fontSize: "14px", fontWeight: "500", letterSpacing: "1.2px", color: "rgba(0, 0, 0, 0.85)"}}> TABULA  </Text> */}
       </Col>
-      <Col span={8} offset={8} style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-end'}}>
+      <Col span={10} offset={6} style={{display: 'flex', alignItems: 'center', justifyContent: 'flex-end'}}>
             {/* <a target="_blank" href="https://instagram.com/tabulaapp" style={{margin: "3px 10px 0px 10px"}}><TwitterOutlined style={{color: "#454545", fontSize: "15px"}}/></a> */}
             <Link to="/research"> <Text style={{color: "#13384e", fontSize: "16px"}}>Research</Text> </Link>
             <Divider type="vertical" style={{borderLeft: "1px solid rgb(31,91,126,0.4)", height: "18px", margin:"3px 20px 0px 20px"}}/>
-            <Link to="/contact"> <Text style={{color: "#13384e", fontSize: "16px"}}>Contact</Text> </Link>
+            <Link to="/about"> <Text style={{color: "#13384e", fontSize: "16px"}}>About</Text> </Link>
+
+            <Divider type="vertical" style={{borderLeft: "1px solid rgb(31,91,126,0.4)", height: "18px", margin:"3px 20px 0px 20px"}}/>
+            <Link to="/contact"> <Text style={{color: "#13384e", fontSize: "16px"}}>Get Involved</Text> </Link>
             {/* <Dropdown overlay={menu} placement="bottomRight">
                 <a className="ant-dropdown-link" style={{}} onClick={e => e.preventDefault()}>
                     <Text style={{color: "#13384e"}}>Information</Text>

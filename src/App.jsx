@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Landing from './pages/Landing/Landing.jsx'
 import Contact from './pages/Contact/Contact.jsx'
 import Research from './pages/Research/Research.jsx'
+import About from './pages/About/About.jsx'
 
 
 import './App.less';
@@ -17,6 +18,8 @@ function App() {
         <Switch>
           <Route exact path="/contact" component={Contact}/>
           <Route exact path="/research" component={Research}/>
+          <Route exact path="/about" component={About}/>
+
           <Route path="/" component={Landing}/>
         </Switch>
 

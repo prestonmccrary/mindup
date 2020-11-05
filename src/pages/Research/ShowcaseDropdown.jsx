@@ -11,9 +11,9 @@ const {Title, Paragraph, Text} = Typography
 
 
 
-const ShowcaseDropdown = ({type, title, paragraphs, link}) => {
+const ShowcaseDropdown = ({type, title, paragraphs, link,initial}) => {
 
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(initial)
 
     return(
             <div style={{display: 'flex', justifyContent: 'center', margin: '20px 0px 20px 0px', width:'84vw', maxWidth: '832px'  }}>
