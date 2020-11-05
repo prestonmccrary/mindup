@@ -8,21 +8,30 @@ import brian from '../../assets/team/brian.png'
 import sean from '../../assets/team/sean.png'
 import avi from '../../assets/team/avi.png'
 
+import SmallerMember from '../About/SmallMembers'
+
 
 const {Title, Text} = Typography
 
-const Team =({showButton}) => {
+const Team =({onLanding}) => {
 
     return(
         <div style={{width: '100%',display:'flex', alignItems: 'center',flexDirection: 'column'}} >
             <Title level={2} style={{color: "#13384e", marginTop: "30px", textAlign: "center"}}> Team </Title>
 
-            <div style={{ display: "flex", justifyContent: 'center', flexWrap: "wrap"}}>
-                <TeamMember info={{name: "Brian Penchina", role: "Backend | ML", linkedIn: "brian-penchina", img: brian}}/>
-                <TeamMember info={{name: "Sean Cheong", role: "Backend | ML", linkedIn: "brian-penchina", img: sean}}/>
-                <TeamMember info={{name: "Avi Curryasan", role: "Backend | ML", linkedIn: "brian-penchina", img: avi}}/>
+            <div style={{ display: "flex", justifyContent: 'center', flexWrap: "wrap", maxWidth: '1000px', margin: '0px auto', marginBottom: '40px'}}>
+                <TeamMember info={{name: "Brian Penchina", role: "Founder | ML", linkedIn:onLanding ? '' : "brian-penchina", img: brian}}/>
+                <TeamMember info={{name: "Sean Cheong", role: "Founder | ML", linkedIn:onLanding ? '' : "brian-penchina", img: sean}}/>
+                <TeamMember info={{name: "Avi Curryasan", role: "Founder | ML", linkedIn: onLanding ? '' :"brian-penchina", img: avi}}/>
+                <SmallerMember info={{name: "Adam Smith", role: "Dude", linkedIn: onLanding ? '' :"link" }}/>
+                <SmallerMember info={{name: "Adam Smith", role: "Dude", linkedIn: onLanding ? '' :"link" }}/>
+                <SmallerMember info={{name: "Adam Smith", role: "Dude", linkedIn: onLanding ? '' :"link" }}/>
+                <SmallerMember info={{name: "Adam Smith", role: "Dude", linkedIn: onLanding ? '' :"link" }}/>
+                <SmallerMember info={{name: "Adam Smith", role: "Dude", linkedIn: onLanding ? '' :"link" }}/>
+                <SmallerMember info={{name: "Adam Smith", role: "Dude", linkedIn: onLanding ? '' :"link" }}/>
+
             </div>
-            {showButton &&
+            {onLanding &&
             <Link to="/about"><Button type="primary">See Full Team</Button></Link>
             }
         </div>

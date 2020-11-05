@@ -26,7 +26,7 @@ const Landing = () => {
             <Features/>
             <Photos/>
             <Timeline/>
-            <Team showButton={true}/>
+            <Team onLanding={true}/>
             <Partners/>
             <Map/>
         </div>
